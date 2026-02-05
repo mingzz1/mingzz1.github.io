@@ -1,0 +1,9 @@
+<ul class='social'>
+    {{ range .Site.Params.Footer.social }}
+    <li>
+        <a href="{{ .url | safeHTML }}" class="icon alt" target="_blank">
+            <i class="fa {{ .icon }} fa-2x"></i>
+        </a>
+    </li>
+    {{ end }}
+</ul>

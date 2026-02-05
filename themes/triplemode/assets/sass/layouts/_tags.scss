@@ -1,0 +1,18 @@
+.tag-title {
+  color: $tags-color;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+  
+}
+.tagged-post {
+  .title {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-weight: $bold;
+    color: $tags-color;
+  }
+}
+
+.ar-title{
+  text-align: center;
+}

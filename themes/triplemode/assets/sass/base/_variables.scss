@@ -1,0 +1,62 @@
+// Typography
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+$font-family-main: "Noto Sans KR";
+$font-family-headings: "Noto Sans KR", sans-serif;
+$font-size: 1.125em;
+
+//breakpoint
+$web-l : 1200px;
+$tab-l : 991px;
+$tab-m : 768px;
+$tab-s : 575px;
+$mob-l : 414px;
+$mob-m : 375px;
+$mob-s : 320px;
+
+//container
+$container-xl: 1200px;
+
+// Padding
+$padding-large: 20%;
+$padding-small: 3%;
+$padding-x-small: 1%;
+
+// Brand colours
+$brand-color: #222831;
+$background-color: #fff;
+$border-color: #ccc;
+$border-sub-color: #000;
+
+// Typography colours
+$text-color: #383838;
+$sub-color: #ccc;
+$link-color: #222831;
+$selection-color: #D4D4D4; // visible when highlighting text
+$icon-color: #222831;
+
+// Tags color
+$tags-color: #b0b0b0;
+
+// Header colours
+$header-color: #222831;
+
+// Feature image for articles
+$feature-image-text-color: #000;
+$feature-image-size: cover; // options include "cover", "contain", "auto"
+
+// Header description box
+$header-desc-background-color: #222831;
+$header-desc-text-color: #b0b0b0;
+
+//font-weight
+$light : 300;
+$normal : 400;
+$medium : 500;
+$semi-bold: 600;
+$bold: 700;
+$extra-bold: 800;
+$black: 900;
+
+// Syntax highlight
+$syntax-background: rgba(27, 31, 35, 0.05);

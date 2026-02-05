@@ -1,0 +1,15 @@
+<div id="post-nav">
+    <div id="previous-post" class="post-nav-post">
+        {{ with .Prev }}
+        <p>{{ .Site.Params.str_previous_post }}</p>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+        {{ end }}
+    </div>
+
+    <div id="next-post" class="post-nav-post">
+        {{ with .Next }}
+        <p>{{ .Site.Params.str_next_post }}</p>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+        {{ end }}
+    </div>
+</div>

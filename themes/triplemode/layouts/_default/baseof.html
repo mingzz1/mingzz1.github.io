@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+
+<html class="no-js">
+{{ partial "head" . }}
+{{ partial "header" . }}
+{{ partial "adsense" . }}
+
+<body>
+    <div class="content">
+        <!-- Code that all your templates share, like a header -->
+        {{ block "main" . }}
+        <!-- The part of the page that begins to differ between templates -->
+        {{ end }}
+    </div>
+    {{ partial "footer" . }}
+    <script id="dsq-count-scr" src="//{{ .Site.Params.disqus_shortname }}.disqus.com/count.js" async></script>
+
+    {{ partial "analytics-google" . }}
+    <!-- More shared code, perhaps a footer but that can be overridden if need be in  -->
+</body>
+</body>
+
+</html>

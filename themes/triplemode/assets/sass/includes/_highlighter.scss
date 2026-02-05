@@ -1,0 +1,19 @@
+.post-content > p > code {
+    background: rgba(27, 31, 35, 0.05);
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-size: 85%;
+}
+
+.post-content > pre {
+    background-color: $syntax-background;
+    color: $text-color;
+    padding: 5px;
+    border-radius: 3px;
+    font-weight: $medium;
+    overflow: auto;
+}
+
+.post-content > pre > code > a {
+    color: $text-color;
+}
