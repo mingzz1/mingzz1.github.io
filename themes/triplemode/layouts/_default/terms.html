@@ -1,0 +1,32 @@
+{{ define "main" }}
+
+<div class="feature-image">
+    <header>
+        <h1 class="title ar-title">
+            tags
+        </h1>
+    </header>
+    <section class="post-content">
+        {{ range .Site.Taxonomies.tags }}
+        <h2 id="{{ .Page.Title }}" class="tag-title">
+            #{{ .Page.Title }}
+        </h2>
+
+        {{ range .Pages }}
+        <div class="tagged-post">
+            <h3 class=title>
+                <a href="{{ .Permalink }}">
+                    {{ .Title }}
+                </a>
+                <small>
+                    {{.Date.Format "2006-01-02"}}
+                </small>
+            </h3>
+        </div>
+
+        {{ end }}
+        {{ end }}
+
+    </section>
+</div>
+{{ end }}

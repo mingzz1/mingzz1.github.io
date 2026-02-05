@@ -1,0 +1,43 @@
+@import './variables';
+
+@mixin pc {
+    @media (max-width: #{$web-l + 1px}){
+        @content;
+    }
+}
+
+@mixin tab-l {
+    @media (max-width: #{$tab-l + 1px}){
+        @content;
+    }
+}
+
+@mixin tab-m {
+    @media (max-width: #{$tab-m + 1px}){
+        @content;
+    }
+}
+
+@mixin tab-s {
+    @media (max-width: #{$tab-s + 1px}){
+        @content;
+    }
+}
+
+@mixin mob-l {
+    @media (max-width: #{$mob-l + 1px}){
+        @content;
+    }
+}
+
+@mixin mob-m {
+    @media (max-width: #{$mob-m + 1px}){
+        @content;
+    }
+}
+
+@mixin mob-s {
+    @media (max-width: #{$mob-s + 1px}){
+        @content;
+    }
+}

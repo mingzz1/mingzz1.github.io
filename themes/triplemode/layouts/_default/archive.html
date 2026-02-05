@@ -1,0 +1,38 @@
+{{ define "main" }}
+<div class="feature-image">
+    <header>
+        <h1 class="title ar-title">
+            {{ .Title }}
+        </h1>
+    </header>
+
+    <section class="post-content">
+        {{ $prev := 3000}}
+        {{range .Site.RegularPages}}
+        {{if .Date}}
+        {{if gt $prev (.Date.Format "2006")}}
+        {{ if ne $prev 3000}}
+        {{ end }}
+        <h2 id='{{ .Date.Format "2006" }}' class="tag-title">
+            {{ .Date.Format "2006" }}
+        </h2>
+
+        <div class="tagged-post">
+            {{end}}
+            <h3 class=title>
+                <a href="{{ .Permalink }}">
+                    {{ .Title }}
+                </a>
+                <small>
+                    {{.Date.Format "2006-01-02"}}
+                </small>
+
+            </h3>
+            {{ $prev = .Date.Format "2006"}}
+            {{end}}
+            {{end}}
+        </div>
+
+    </section>
+</div>
+{{ end }}

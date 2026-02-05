@@ -1,0 +1,7 @@
+<footer>
+    <div class="tags">
+        {{ range (.GetTerms "tags") }}
+        <a href="{{ .Site.BaseURL }}/tags#{{ .LinkTitle }}">#{{ .LinkTitle }}</a>
+        {{ end }}
+    </div>
+</footer>

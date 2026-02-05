@@ -1,0 +1,57 @@
+baseURL = "https://mingzz1.github.io/"
+languageCode = "ko-kr"
+title = "mingzzi's blog"
+theme = "triplemode"
+
+disablePathToLower = "true"
+
+[params]
+favicon = "img/favicon.ico"
+description = "mingzzi's blog"
+disqus_shortname = "mingzzis-blog"
+google_analytics = "UA-130304424-1"
+
+str_next_post = "Next post"
+str_previous_post = "Previous post"
+str_next_page = "Next"
+str_previous_page = "Prev"
+
+[taxonomies]
+    category = "categories"
+    tag = "tags"
+    subcategory = "subcategories"
+
+[permalinks]
+  ctf = "/:sections/:year/:month/:day/:filename.html"
+  development = "/:sections/:year/:month/:day/:filename.html"
+  error = "/:sections/:year/:month/:day/:filename.html"
+  pentesting = "/:sections/:year/:month/:day/:filename.html"
+  wargame = "/:sections/:year/:month/:day/:filename.html"
+
+[markup]
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineAnchors = ""
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = true
+    style = "dracula"
+    tabWidth = 4
+
+	[params.footer]
+		enable=true
+		copyright = "mingzzi"
+
+    [[params.footer.social]]
+		icon = "fa-github"
+		url= "https://github.com/mingzz1"
+		label = "GitHub"
+
+	[[params.footer.social]]
+		icon = "fa-linkedin"
+		url= "https://www.linkedin.com/in/minji-kim-12986a145/"
+		label = "Linkedin"

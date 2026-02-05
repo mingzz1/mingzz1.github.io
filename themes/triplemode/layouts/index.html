@@ -1,0 +1,51 @@
+{{ define "main" }}
+<div class="home">
+    <div class="posts">
+        {{ partial "home_nav" . }}
+
+        <div>
+            <h3>All Post <span>{{ len .Site.RegularPages }}</span></h3>
+            <ul class="post-box">
+                {{ range .Paginator.Pages }}
+                <li class="post-teaser">
+                    <a href="{{.Permalink}}">
+                        <div>
+                            <h4>{{.Title}}</h4>
+                            <div class="post-info">
+                                <p class="meta">
+                                    {{.Date.Format "2006-01-02"}}
+                                </p>
+                                <div class="excerpt">
+                                    {{ .Summary }}
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+    </div>
+
+    {{ if gt .Paginator.TotalPages 1 }}
+    <div class="pagination">
+
+        {{ if .Paginator.HasPrev }}
+        <a href="{{ .Paginator.Prev.URL }}" class="button">
+            <i class="fa fa-chevron-left"></i>
+            {{ .Site.Params.str_previous_page }}
+        </a>
+        {{ end }}
+
+        {{ if .Paginator.HasNext }}
+        <a href="{{ .Paginator.Next.URL }}" class="button">
+            {{ .Site.Params.str_next_page }}
+            <i class="fa fa-chevron-right"></i>
+        </a>
+        {{ end }}
+
+    </div>
+    {{ end }}
+
+</div>
+{{ end }}
