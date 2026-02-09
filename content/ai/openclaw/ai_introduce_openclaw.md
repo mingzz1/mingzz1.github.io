@@ -99,15 +99,17 @@ AI Agent는 다음을 절대 유출하거나 전달해서는 안 됨:
 
 메신저는 처음에 Discord를 연동했다. 처음엔 Claude Opus 모델을 사용했는데 이 모델을 사용했더니 정말 사람 비서와 대화하는 것 같았다. 이런 장난도 가능하다.
 
-![](/images/ai/openclaw_introduce/01.jpeg)  
+<img src="/images/ai/openclaw_introduce/01.jpeg" width="70%" />
 
 물론 실수를 하면 이렇게 오버액션을 하기도 한다.
 
-![](/images/ai/openclaw_introduce/02.jpeg)  
+<img src="/images/ai/openclaw_introduce/02.jpeg" width="70%" />
 
 그런데 OpenClaw에 미리 정의된 명령어(세션 토큰의 길이를 줄이는 `/compact`, 현재 사용 가능한 모델을 확인하고 변경할 수 있는 `/models`, `/model` 등)가 있는데, 이 명령어 중 일부는 디스코드의 채널 형태에서는 사용이 불가능하다. 봇과의 DM에서만 가능하다. 그래서 고민하다가 텔레그램으로 옮겼다. 디스코드보다는 DM 메신저 사용 측면에서 조금 더 편했다.
 
 봇을 생성하고 DM을 할 경우, 불특정 다수가 내 봇을 추가해 대화하는 거 아닌가 살짝 걱정했는데, OpenClaw에는 [DM Pairing](https://docs.openclaw.ai/channels/pairing) 이라는 기능이 있다. 처음 봇과 대화를 시작하면 `Pairing Code`가 온다. 이 코드를 가지고 서버에서 `Approve`를 해야 제대로 된 대화를 할 수 있다. 때문에 DM Pairing 설정을 해두면 나도 모르는 사이 불특정 다수가 내 봇을 사용하여 내 크레딧을 사용하는 것을 방지할 수 있다.
+
+<img src="/images/ai/openclaw_introduce/03.jpeg" width="70%" />
 
 OpenClaw를 가지고 이것저것 연동을 하면 쓸 곳이 매우 많다고 한다. 예를 들면 Gmail을 연동해서 메일 정리를 시킬수도 있고, 메모 작성이나 알람 보내기, 심지어 문자를 보내기도 가능한 것 같다. [https://clawhub.ai/skills](https://clawhub.ai/skills)에서 사람들이 만들어 둔 기능들을 활용할 수도 있다. 나는 뭘 할까 고민하다가 매일 일기를 쓰게 시켜 보았다. (인스턴스 만들기와 블로그 테마는 내가 정했지만) 도메인 선정부터 서버 세팅, 모든 글은 내 AI Agent인 Vega가 만들었다.
 
@@ -119,10 +121,10 @@ OpenClaw를 사용하려면 몇 가지 주의 사항이 있다.
 
 1. OpenClaw 자체가 AI는 아니다. OpenAI, Anthropic 등 LLM API 제공사에서 API 키를 발급받아 비용을 지불해야 한다. 비용은 아래를 참고하면 된다.
 
-* [Claude API Pricing](https://platform.claude.com/docs/en/about-claude/pricing)
-* [OpenAI API Pricing](https://platform.openai.com/docs/pricing)
+    * [Claude API Pricing](https://platform.claude.com/docs/en/about-claude/pricing)
+    * [OpenAI API Pricing](https://platform.openai.com/docs/pricing)
 
-Claude를 사용하는 경우, Claude Code의 OAuth 토큰(이미 Claude 구독자일 경우 별도의 추가 비용 없이 인증 가능)을 사용한다면 Claude의 TOS 정책 위반일 수 있다. 정책 위반일 경우 차단될 수 있으므로 이왕이면 API 키를 발급받아 충전해서 사용하는 것이 좋다. (OpenAI가 훨씬 쌈)
+    Claude를 사용하는 경우, Claude Code의 OAuth 토큰(이미 Claude 구독자일 경우 별도의 추가 비용 없이 인증 가능)을 사용한다면 Claude의 TOS 정책 위반일 수 있다. 정책 위반일 경우 차단될 수 있으므로 이왕이면 API 키를 발급받아 충전해서 사용하는 것이 좋다. (OpenAI가 훨씬 쌈)
 
 2. [MoltBook](https://www.moltbook.com/)은 에이전트가 알아서 가입하는 것이 아니라 사용자가 에이전트에게 가입 방법을 알려주어야 한다. 하지만 API 크레딧이 넉넉하지 않다면 하지 않는 것을 추천한다. 수시로 글을 쓰며 크레딧을 소모할 수 있다. 만약 자체 구축한 오픈소스 AI라면 한번쯤 시도해볼만 할 것 같다. 단, 이 경우에도 중요 정보가 저장되어 있는 자산이라면 추천하지 않는다.
 

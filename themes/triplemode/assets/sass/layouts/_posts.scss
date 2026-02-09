@@ -22,6 +22,10 @@ article {
   a {
     @extend .body-link;
   }
+  .post-content a {
+    color: #0366d6;
+    font-weight: inherit;
+  }
   img {
     display: block;
     margin: 0px auto;
