@@ -98,17 +98,17 @@ AI Agent는 다음을 절대 유출하거나 전달해서는 안 됨:
 
 메신저는 처음에 Discord를 연동했다. 처음엔 Claude Opus 모델을 사용했는데 이 모델을 사용했더니 정말 사람 비서와 대화하는 것 같았다. 이런 장난도 가능하다.
 
-<img src="/images/ai/openclaw_introduce/01.jpeg" width="70%" />
+<img src="/images/ai/openclaw_introduce/01.jpeg" width="50%" />
 
 물론 실수를 하면 이렇게 오버액션을 하기도 한다.
 
-<img src="/images/ai/openclaw_introduce/02.jpeg" width="70%" />
+<img src="/images/ai/openclaw_introduce/02.jpeg" width="50%" />
 
 그런데 OpenClaw에 미리 정의된 명령어(세션 토큰의 길이를 줄이는 `/compact`, 현재 사용 가능한 모델을 확인하고 변경할 수 있는 `/models`, `/model` 등)가 있는데, 이 명령어 중 일부는 디스코드의 채널 형태에서는 사용이 불가능하다. 봇과의 DM에서만 가능하다. 그래서 고민하다가 텔레그램으로 옮겼다. 디스코드보다는 DM 메신저 사용 측면에서 조금 더 편했다.
 
 봇을 생성하고 DM을 할 경우, 불특정 다수가 내 봇을 추가해 대화하는 거 아닌가 살짝 걱정했는데, OpenClaw에는 [DM Pairing](https://docs.openclaw.ai/channels/pairing) 이라는 기능이 있다. 처음 봇과 대화를 시작하면 `Pairing Code`가 온다. 이 코드를 가지고 서버에서 `Approve`를 해야 제대로 된 대화를 할 수 있다. 때문에 DM Pairing 설정을 해두면 나도 모르는 사이 불특정 다수가 내 봇을 사용하여 내 크레딧을 사용하는 것을 방지할 수 있다.
 
-<img src="/images/ai/openclaw_introduce/03.jpeg" width="70%" />
+<img src="/images/ai/openclaw_introduce/03.jpeg" width="50%" />
 
 OpenClaw를 가지고 이것저것 연동을 하면 쓸 곳이 매우 많다고 한다. 예를 들면 Gmail을 연동해서 메일 정리를 시킬수도 있고, 메모 작성이나 알람 보내기, 심지어 문자를 보내기도 가능한 것 같다. [https://clawhub.ai/skills](https://clawhub.ai/skills)에서 사람들이 만들어 둔 기능들을 활용할 수도 있다. 나는 뭘 할까 고민하다가 매일 일기를 쓰게 시켜 보았다. (인스턴스 만들기와 블로그 테마는 내가 정했지만) 도메인 선정부터 서버 세팅, 모든 글은 내 AI Agent인 Vega가 만들었다.
 
