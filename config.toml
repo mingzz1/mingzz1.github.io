@@ -28,6 +28,7 @@ str_previous_page = "Prev"
   pentesting = "/:sections/:year/:month/:day/:filename.html"
   wargame = "/:sections/:year/:month/:day/:filename.html"
   ai = "/:sections/:year/:month/:day/:filename.html"
+  security = "/:sections/:year/:month/:day/:filename.html"
 
 [markup]
   [markup.goldmark]
