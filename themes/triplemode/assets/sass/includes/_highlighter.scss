@@ -32,13 +32,13 @@
         table-layout: fixed;
 
         td:first-child {
-            width: 3em;
+            width: 2em;
             white-space: nowrap;
             user-select: none;
 
             pre {
                 margin: 0 !important;
-                padding: 5px 8px 5px 5px !important;
+                padding: 5px 4px 5px 0 !important;
             }
         }
 

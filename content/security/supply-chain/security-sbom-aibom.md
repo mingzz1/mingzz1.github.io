@@ -48,54 +48,54 @@ Linux Foundation에서 관리하는 국제 표준(ISO/IEC 5962:2021)이다.
 
 ```json
 {
-  "spdxVersion": "SPDX-2.3",
-  "dataLicense": "CC0-1.0",
-  "SPDXID": "SPDXRef-DOCUMENT",
-  "name": "Example-WebApp",
-  "documentNamespace": "https://example.com/sbom/webapp-1.0",
-  "creationInfo": {
-    "created": "2026-02-09T00:00:00Z",
-    "creators": ["Tool: example-sbom-generator-1.0"]
-  },
-  "packages": [
-    {
-      "SPDXID": "SPDXRef-Package-react",
-      "name": "react",
-      "versionInfo": "18.2.0",
-      "supplier": "Organization: Meta Platforms",
-      "downloadLocation": "https://registry.npmjs.org/react/-/react-18.2.0.tgz",
-      "licenseConcluded": "MIT",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "npm",
-          "referenceLocator": "react@18.2.0"
-        }
-      ]
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "Example-WebApp",
+    "documentNamespace": "https://example.com/sbom/webapp-1.0",
+    "creationInfo": {
+        "created": "2026-02-09T00:00:00Z",
+        "creators": ["Tool: example-sbom-generator-1.0"]
     },
-    {
-      "SPDXID": "SPDXRef-Package-express",
-      "name": "express",
-      "versionInfo": "4.18.2",
-      "supplier": "Organization: OpenJS Foundation",
-      "downloadLocation": "https://registry.npmjs.org/express/-/express-4.18.2.tgz",
-      "licenseConcluded": "MIT",
-      "externalRefs": [
+    "packages": [
         {
-          "referenceCategory": "SECURITY",
-          "referenceType": "cpe23Type",
-          "referenceLocator": "cpe:2.3:a:expressjs:express:4.18.2:*:*:*:*:*:*:*"
+            "SPDXID": "SPDXRef-Package-react",
+            "name": "react",
+            "versionInfo": "18.2.0",
+            "supplier": "Organization: Meta Platforms",
+            "downloadLocation": "https://registry.npmjs.org/react/-/react-18.2.0.tgz",
+            "licenseConcluded": "MIT",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceType": "npm",
+                    "referenceLocator": "react@18.2.0"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-Package-express",
+            "name": "express",
+            "versionInfo": "4.18.2",
+            "supplier": "Organization: OpenJS Foundation",
+            "downloadLocation": "https://registry.npmjs.org/express/-/express-4.18.2.tgz",
+            "licenseConcluded": "MIT",
+            "externalRefs": [
+                {
+                    "referenceCategory": "SECURITY",
+                    "referenceType": "cpe23Type",
+                    "referenceLocator": "cpe:2.3:a:expressjs:express:4.18.2:*:*:*:*:*:*:*"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "relationships": [
-    {
-      "spdxElementId": "SPDXRef-DOCUMENT",
-      "relationshipType": "DESCRIBES",
-      "relatedSpdxElement": "SPDXRef-Package-react"
-    }
-  ]
+    ],
+    "relationships": [
+        {
+            "spdxElementId": "SPDXRef-DOCUMENT",
+            "relationshipType": "DESCRIBES",
+            "relatedSpdxElement": "SPDXRef-Package-react"
+        }
+    ]
 }
 ```
 
@@ -105,72 +105,72 @@ OWASP에서 관리하는 포맷으로, 보안 관점에 특화되어 있다.
 
 ```json
 {
-  "bomFormat": "CycloneDX",
-  "specVersion": "1.5",
-  "serialNumber": "urn:uuid:3e671687-395b-41f5-a30f-a58921a69b79",
-  "version": 1,
-  "metadata": {
-    "timestamp": "2026-02-09T00:00:00Z",
-    "component": {
-      "type": "application",
-      "name": "Example-WebApp",
-      "version": "1.0.0"
-    }
-  },
-  "components": [
-    {
-      "type": "library",
-      "name": "react",
-      "version": "18.2.0",
-      "purl": "pkg:npm/react@18.2.0",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT"
-          }
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.5",
+    "serialNumber": "urn:uuid:3e671687-395b-41f5-a30f-a58921a69b79",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2026-02-09T00:00:00Z",
+        "component": {
+            "type": "application",
+            "name": "Example-WebApp",
+            "version": "1.0.0"
         }
-      ],
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "a1b2c3d4e5f6..."
-        }
-      ]
     },
-    {
-      "type": "library",
-      "name": "express",
-      "version": "4.18.2",
-      "purl": "pkg:npm/express@4.18.2",
-      "licenses": [
+    "components": [
         {
-          "license": {
-            "id": "MIT"
-          }
-        }
-      ]
-    }
-  ],
-  "vulnerabilities": [
-    {
-      "id": "CVE-2024-XXXXX",
-      "source": {
-        "name": "NVD"
-      },
-      "ratings": [
+            "type": "library",
+            "name": "react",
+            "version": "18.2.0",
+            "purl": "pkg:npm/react@18.2.0",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "MIT"
+                    }
+                }
+            ],
+            "hashes": [
+                {
+                    "alg": "SHA-256",
+                    "content": "a1b2c3d4e5f6..."
+                }
+            ]
+        },
         {
-          "severity": "high",
-          "score": 8.1,
-          "method": "CVSSv3"
+            "type": "library",
+            "name": "express",
+            "version": "4.18.2",
+            "purl": "pkg:npm/express@4.18.2",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "MIT"
+                    }
+                }
+            ]
         }
-      ],
-      "affects": [
+    ],
+    "vulnerabilities": [
         {
-          "ref": "pkg:npm/express@4.18.2"
+            "id": "CVE-2024-XXXXX",
+            "source": {
+                "name": "NVD"
+            },
+            "ratings": [
+                {
+                    "severity": "high",
+                    "score": 8.1,
+                    "method": "CVSSv3"
+                }
+            ],
+            "affects": [
+                {
+                    "ref": "pkg:npm/express@4.18.2"
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }
 ```
 
@@ -225,123 +225,123 @@ AIBOM은 아직 SBOM처럼 표준화된 단일 포맷이 확립되지는 않았�
 
 ```json
 {
-  "bomFormat": "CycloneDX",
-  "specVersion": "1.6",
-  "serialNumber": "urn:uuid:9a8b7c6d-5e4f-3a2b-1c0d-e9f8a7b6c5d4",
-  "version": 1,
-  "metadata": {
-    "timestamp": "2026-02-09T00:00:00Z",
-    "component": {
-      "type": "machine-learning-model",
-      "name": "Sentiment-Analysis-Service",
-      "version": "2.1.0",
-      "description": "고객 리뷰 감성 분석 AI 서비스"
-    }
-  },
-  "components": [
-    {
-      "type": "machine-learning-model",
-      "name": "sentiment-bert-ko",
-      "version": "1.0.0",
-      "description": "한국어 감성 분석을 위해 Fine-tuning된 BERT 모델",
-      "purl": "pkg:huggingface/org/sentiment-bert-ko@1.0.0",
-      "modelCard": {
-        "modelParameters": {
-          "approach": {
-            "type": "supervised"
-          },
-          "task": "sentiment-analysis",
-          "architectureFamily": "BERT",
-          "modelArchitecture": "bert-base-multilingual-cased",
-          "datasets": [
-            {
-              "name": "korean-review-dataset",
-              "type": "dataset",
-              "contents": {
-                "type": "text",
-                "sizeInBytes": 524288000
-              },
-              "classification": "public"
-            }
-          ],
-          "inputs": [
-            {
-              "format": "text/plain"
-            }
-          ],
-          "outputs": [
-            {
-              "format": "application/json"
-            }
-          ]
-        },
-        "quantitativeAnalysis": {
-          "performanceMetrics": [
-            {
-              "type": "accuracy",
-              "value": "0.92",
-              "confidenceInterval": {
-                "lowerBound": "0.90",
-                "upperBound": "0.94"
-              }
-            },
-            {
-              "type": "f1-score",
-              "value": "0.91"
-            }
-          ]
-        },
-        "considerations": {
-          "ethicalConsiderations": [
-            {
-              "name": "bias",
-              "mitigationStrategy": "학습 데이터에서 성별, 나이, 지역 관련 편향을 제거하기 위한 전처리 수행"
-            }
-          ]
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:9a8b7c6d-5e4f-3a2b-1c0d-e9f8a7b6c5d4",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2026-02-09T00:00:00Z",
+        "component": {
+            "type": "machine-learning-model",
+            "name": "Sentiment-Analysis-Service",
+            "version": "2.1.0",
+            "description": "고객 리뷰 감성 분석 AI 서비스"
         }
-      }
     },
-    {
-      "type": "framework",
-      "name": "pytorch",
-      "version": "2.1.0",
-      "purl": "pkg:pypi/torch@2.1.0"
-    },
-    {
-      "type": "library",
-      "name": "transformers",
-      "version": "4.36.0",
-      "purl": "pkg:pypi/transformers@4.36.0"
-    },
-    {
-      "type": "data",
-      "name": "korean-review-dataset",
-      "version": "3.0",
-      "description": "한국어 상품 리뷰 감성 분석 데이터셋 (50만 건)",
-      "data": {
-        "type": "dataset",
-        "contents": {
-          "url": "https://example.com/datasets/korean-review-v3"
+    "components": [
+        {
+            "type": "machine-learning-model",
+            "name": "sentiment-bert-ko",
+            "version": "1.0.0",
+            "description": "한국어 감성 분석을 위해 Fine-tuning된 BERT 모델",
+            "purl": "pkg:huggingface/org/sentiment-bert-ko@1.0.0",
+            "modelCard": {
+                "modelParameters": {
+                    "approach": {
+                        "type": "supervised"
+                    },
+                    "task": "sentiment-analysis",
+                    "architectureFamily": "BERT",
+                    "modelArchitecture": "bert-base-multilingual-cased",
+                    "datasets": [
+                        {
+                            "name": "korean-review-dataset",
+                            "type": "dataset",
+                            "contents": {
+                                "type": "text",
+                                "sizeInBytes": 524288000
+                            },
+                            "classification": "public"
+                        }
+                    ],
+                    "inputs": [
+                        {
+                            "format": "text/plain"
+                        }
+                    ],
+                    "outputs": [
+                        {
+                            "format": "application/json"
+                        }
+                    ]
+                },
+                "quantitativeAnalysis": {
+                    "performanceMetrics": [
+                        {
+                            "type": "accuracy",
+                            "value": "0.92",
+                            "confidenceInterval": {
+                                "lowerBound": "0.90",
+                                "upperBound": "0.94"
+                            }
+                        },
+                        {
+                            "type": "f1-score",
+                            "value": "0.91"
+                        }
+                    ]
+                },
+                "considerations": {
+                    "ethicalConsiderations": [
+                        {
+                            "name": "bias",
+                            "mitigationStrategy": "학습 데이터에서 성별, 나이, 지역 관련 편향을 제거하기 위한 전처리 수행"
+                        }
+                    ]
+                }
+            }
         },
-        "governance": {
-          "owners": ["Data Team"],
-          "custodians": ["ML Platform Team"]
+        {
+            "type": "framework",
+            "name": "pytorch",
+            "version": "2.1.0",
+            "purl": "pkg:pypi/torch@2.1.0"
         },
-        "classification": "internal"
-      }
-    }
-  ],
-  "dependencies": [
-    {
-      "ref": "Sentiment-Analysis-Service",
-      "dependsOn": [
-        "sentiment-bert-ko",
-        "pytorch",
-        "transformers",
-        "korean-review-dataset"
-      ]
-    }
-  ]
+        {
+            "type": "library",
+            "name": "transformers",
+            "version": "4.36.0",
+            "purl": "pkg:pypi/transformers@4.36.0"
+        },
+        {
+            "type": "data",
+            "name": "korean-review-dataset",
+            "version": "3.0",
+            "description": "한국어 상품 리뷰 감성 분석 데이터셋 (50만 건)",
+            "data": {
+                "type": "dataset",
+                "contents": {
+                    "url": "https://example.com/datasets/korean-review-v3"
+                },
+                "governance": {
+                    "owners": ["Data Team"],
+                    "custodians": ["ML Platform Team"]
+                },
+                "classification": "internal"
+            }
+        }
+    ],
+    "dependencies": [
+        {
+            "ref": "Sentiment-Analysis-Service",
+            "dependsOn": [
+                "sentiment-bert-ko",
+                "pytorch",
+                "transformers",
+                "korean-review-dataset"
+            ]
+        }
+    ]
 }
 ```
 
