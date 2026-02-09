@@ -25,35 +25,30 @@
     overflow: auto;
     border-radius: 3px;
 
-    .lntable {
-        width: 100%;
-        border-spacing: 0;
-        margin: 0;
+    table {
+        width: 100% !important;
+        border-spacing: 0 !important;
+        margin: 0 !important;
+        table-layout: fixed;
 
-        .lntd {
-            padding: 0;
-            vertical-align: top;
+        td:first-child {
+            width: 3em;
+            white-space: nowrap;
+            user-select: none;
 
-            &:first-child {
-                width: 1%;
-                white-space: nowrap;
-                user-select: none;
-
-                pre {
-                    padding: 5px 10px 5px 5px;
-                    margin: 0;
-                    color: #6e7681;
-                    text-align: right;
-                    border-right: 1px solid #444;
-                }
+            pre {
+                margin: 0 !important;
+                padding: 5px 8px 5px 5px !important;
             }
+        }
 
-            &:last-child {
-                pre {
-                    padding: 5px 5px 5px 10px;
-                    margin: 0;
-                    overflow: auto;
-                }
+        td:last-child {
+            width: auto;
+
+            pre {
+                margin: 0 !important;
+                padding: 5px 5px 5px 10px !important;
+                overflow-x: auto;
             }
         }
     }
