@@ -27,6 +27,7 @@ str_previous_page = "Prev"
   error = "/:sections/:year/:month/:day/:filename.html"
   pentesting = "/:sections/:year/:month/:day/:filename.html"
   wargame = "/:sections/:year/:month/:day/:filename.html"
+  ai = "/:sections/:year/:month/:day/:filename.html"
 
 [markup]
   [markup.highlight]
