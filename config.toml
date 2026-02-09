@@ -30,6 +30,9 @@ str_previous_page = "Prev"
   ai = "/:sections/:year/:month/:day/:filename.html"
 
 [markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
   [markup.highlight]
     anchorLineNos = false
     codeFences = true

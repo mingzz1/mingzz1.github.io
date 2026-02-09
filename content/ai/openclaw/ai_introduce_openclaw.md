@@ -7,12 +7,11 @@ subcategories: [openclaw]
 tags: [ai, openclaw]
 ---
 
-약 일주일 전, SNS에서 [OpenClaw](https://openclaw.ai/)에 대해 알게 되었다.
-나만의 AI 비서를 만들 수 있다, 밤 새 만 개 넘는 이메일을 분류해 주었다 등 재미있는 이야기가 많아 보여 나도 설치해 보게 되었다.
+약 일주일 전, SNS에서 OpenClaw에 대해 알게 되었다. 나만의 AI 비서를 만들 수 있다, 밤 새 만 개 넘는 이메일을 분류해 주었다 등 재미있는 이야기가 많아 보여 나도 설치해 보게 되었다.
 
 <!--more-->
 
-조금 서치해 보니 다들 Mac Mini에 설치를 많이 하는 것 같았다. 그도 그럴 것이 OpenClaw의 [Integration](https://openclaw.ai/integrations) 목록을 보면 애플의 앱이 다수 연동되어 있었다.
+조금 서치해 보니 다들 Mac Mini에 설치를 많이 하는 것 같았다. 그도 그럴 것이 [OpenClaw](https://openclaw.ai/)의 [Integration](https://openclaw.ai/integrations) 목록을 보면 애플의 앱이 다수 연동되어 있었다.
 
 나는 Mac Mini가 없어서 Windows 데스크탑에 설치할까, Macbook Air에 설치할까 고민하다가 `설치된 기기의 전체 접근 권한을 갖는다`는 점 때문에 별도의 독립 공간인 AWS Lightsail 서버에 설치하게 되었다. 설치 방법은 아래 가이드에 따라 CLI로 설치했다. 다만 설치 전 Node 22 이상 버전이 설치되어 있어야 한다.
 

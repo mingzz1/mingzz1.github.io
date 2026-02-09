@@ -26,6 +26,11 @@ article {
     color: #0366d6;
     font-weight: inherit;
   }
+  .post-content ol,
+  .post-content ul {
+    list-style-position: outside;
+    padding-left: 2em;
+  }
   img {
     display: block;
     margin: 0px auto;
